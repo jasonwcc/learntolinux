@@ -1,0 +1,171 @@
+visudo
+cd /etc/yum.repos.d
+df -k
+pwd
+cd ~
+pwd
+cat /etc/shadow
+cd 
+cd .ssh
+ls
+ls -a
+ssh-keygen
+ls
+cat id_rsa
+ssh-keygen --help
+ssh-keygen -b 4096
+cat /etc/shadow
+uname;id;hostname;cal
+alias mycmds="uname;id;hostname;cal"
+mycmds
+cd
+vi .bashrc
+ls 
+ls -l
+ls -lt
+ls -ltr
+ls
+alias ls="ls -ltr"
+ls
+unalias ls
+which ls
+which cat
+which more
+ls -l
+cd /bin
+cd /sbin
+cd /sbin
+ls
+ls | wc -l
+cd /bin/
+ls  | wc -l
+which zic
+inffo tar
+info tar
+pinfo tar
+nmcli connection show ens160
+cd /etc
+cd /bin
+ls a
+cd /bin*
+ls a*
+ls b*
+ls *p
+ls a*p
+ls a* b* c*
+ls abc*
+ls [abc]*
+ls [abtc]*
+ls [a-m]*
+ls [a-mr-v]*
+ls [test]*
+ls {sg,tpm}_*
+ls {sg,tpm2}_*
+ls a??
+ls a?c*
+ls
+date
+uname -a
+uname -a > /tmp/result.log
+date  >> /tmp/result.log 
+cat /tmp/result.log 
+cal > /tmp/result.log
+cat /tmp/result.log 
+ls -l 1> /tmp/result1.log
+cat /tmp/result1.log 
+ls -l /etc/passwdd > /tmp/result1.log
+ls -l /etc/passwd > /tmp/result1.log 
+cat /tmp/result1.log 
+ls -l /etc/shadoww >> /tmp/result1.log 
+cat /tmp/result1.log 
+ls -l /etc/shadoww 2>> /tmp/result1.log 
+cat /tmp/result1.log 
+ls -l /etc/a* 1> /tmp/result2.log 2> /tmp/result2.log
+ls -l /etc/b* 1> /tmp/result2.log 2> /tmp/result2.log
+ls -l /etc/bbbbb* 1> /tmp/result2.log 2> /tmp/result2.log
+cat /tmp/result2.log 
+ls -l /etc/b* 1>> /tmp/result2.log 2>> /tmp/result2.log
+ls -l /etc/a* 1>> /tmp/result2.log 2>> /tmp/result2.log
+ls -l /etc/bbba* 1>> /tmp/result2.log 2>> /tmp/result2.log
+cat /tmp/result2.log 
+ls -l /etc/bcbba* 1>> /tmp/result2.log 2>&1
+ifconfig
+vi /
+vi /etc/hosts
+hostname
+h
+ifconfig
+
+free
+systemctl start sshd
+systemctl enable sshd --now
+ls -l
+cd 
+ls
+su - student
+cd /dev
+cd /tmp
+mkdir test
+cd /test
+cd test
+ls 
+ls -a
+ls -l
+ls -la
+cd .
+cd .
+cp /etc/passwd .
+ls
+cp /etc/passwd password
+ls
+cp /etc/passwd ./password
+cp /etc/passwd ./password2
+ls
+touch .password3
+ls
+mkdir .report1
+ls
+ls -a
+ls -l
+\ls 
+\ls  -a
+pwd
+cd 
+pwd
+cd -
+cd ~
+cd -
+cd ~student
+pwd
+cp /etc/passwd ~student/password2
+ls ~student
+grep wheel /etc/group
+visudo
+cat /etc/group
+ls
+ls -l
+touch file1 file2 file3
+echo "hello world" > file2
+ls -l
+touch file1 file2 file4
+ls -l
+touch file1 file2 file4
+ls -l
+touch jason wong
+ls -l
+rm jason wong
+touch "jason wong"
+ls -l
+touch file.txt
+touch peter\ pan
+ls -l
+vi jason\ wong 
+cat jason\ wong 
+history
+ls -l /etc/bcbba* 1>> /tmp/result2.log 2>&1
+cd /dev
+ls -l
+sudo su 
+ls .bash_history 
+catash_history 
+cat .bash_history  
