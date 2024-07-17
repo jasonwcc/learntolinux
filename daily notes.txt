@@ -1,0 +1,408 @@
+open-source
+- freely for viewing, editing, sharing
+
+vs
+closed-source
+- perpertual license
+- subscription
+
+
+cmd -parameter
+cmc --parameter-word
+
+ls -l -t -r
+ls --long
+
+
+VMware Workstation Pro (trial)
+RedHat 9.4...ISO
+
+redhat
+
+subscription
+- no support
+- cant download updates/upgrades
+- cant install packages
+
+1. developers.redhat.com
+2. can ISO as local DVD
+3. configure yum point to 
+another vendor repository
+
+
+
+FQDN
+Jason.trainocate.com
+
+
+/<pattern>
+?<pattern>
+
+/-m
+n
+N
+
+BC before christ
+0002 AD
+
+2024
+
+foreground
+- one process actively running
+
+background
+- multiple process actively running
+- cmd &
+
+ctrl+z
+
+bourne - /bin/sh
+- first shell created in unix
+- basic command
+
+korn   - /bin/ksh
+- scripting
+- aliases
+
+csh    - /bin/csh
+- c language
+- programming
+  --> compile / make
+      machine readable
+- source code(text) --> binary
+
+
+zsh
+tcsh
+
+
+Linux 
+- bash
+  -- tab
+  -- history
+
+
+register
+X attach
+
+configure yum repository to local 
+DVD
+sudo dnf -y install ksh
+
+
+2:05
+
+subscription-manager register
+username:
+password:
+succeeded
+subscription-manager attach --auto
+how to disable Simple Content Access (SCA)
+
+show all processes
+ps -ef 
+
+count
+wc 
+
+ps -ef | wc
+
+cat fruits | wc
+
+cmd1 | cmd2 | cmd3 | cmd4
+
+cmd1 ; cmd2 ; cmd3 ; cmd4
+
+
+c:\program files\office 365
+
+
+/home/student/dir1
+
+hashed
+vs
+encrypted == > decrypt
+
+cmd subcommand --parameter
+
+cmd 
+
+HDD
+- sectors  > tracks > cylinders > blocks
+- 15000 rpm
+vs
+SSD / Flash / network
+- milisecond
+vs
+NVMe
+- microsecond
+Memory
+- nanosecond
+CPU
+- 6GHz/core ==> POWER10 8 thread
+ls -l 
+first character:
+- regular file / hard link
+
+d directory
+b block file (4k/8k)
+- ls / cat /more /cd
+c character / sector / raw = 512b
+- tunefs / mkfs / mount /
+l symbolic link = shortcut link
+
+.  HERE
+
+
+
+
+
+Post Installation
+- root : superuser : 0 : lock and assign no password
+
+vs
+
+- student : do normal work
+  -- wheel sudo --> root
+
+
+
+
+github.com/jasonwcc/learntolinux
+
+
+vi fruits
+visudo edit /etc/sudoers
+--  sudo:
+
+:wq! - changing some security/protected files 
+       even u r root
+ZZ  = :wq
+
+:q!  - quit without saving
+:q   - quit
+
+Change letter/word
+cw	- change single word
+r	- change single letter
+R
+5cw	- change multiple words
+
+Find
+/<word>
+?<word>
+
+Find and replace word(s)
+find apples one by one and change to oranges
+global change
+:%s/old/new/g
+:%s/old/new 
+
+Jump
+shift+g  : jump to end of file
+1G	 : jump to line 10
+:10	 : jump to line 10
+
+Deleting
+dw	- delete single word
+dd	- delete line
+3cw	- change next three words
+
+Undo changes
+u 	- to undo last action
+U	- to undo all changes on current line
+:e!	- to undo all changes since last saved
+.	- repeat last action
+
+
+Copy line/word > paste
+5yy > p / P
+2yw > p / P
+or
+:5,10 co 100
+copy line between line 5 and 10 to line after 100
+
+Move line/word > paste
+5dd > p / P
+2dw > p / P
+or
+:5,10 mo 100
+move line between line 5 and 10 to line after 100
+
+
+Orchestration platform
+- RH ansible , terraform, chef, puppet
+
+RH ansible / openshift / RHEL
+- subscription
+
+
+
+declarative syntax/language
+- YAML, XML, JSON, TOML
+
+mv -i
+cp -i 
+
+copy between/within 
+- always create file on destination
+/etc/password 16-July
+cp -pir /etc/passwd /tmp
+/tmp/passwd   17-July
+
+
+
+1. move files within file system
+2. move files between file system
+  -- copy the file
+  -- delete the orig
+
+verbose = details
+
+
+grep line 10 to 20 from /etc/passwd
+
+
+
+-n suppress
+
+symbolic link
+- use as shortcut 
+- point to target file using path
+- can point to file / directory
+- can point to file in another file system
+- if original file name changed/deleted
+vs
+hard link
+- use as backup
+- point to target file using data block/inode
+- can point to file only
+- must point to file within same file system as
+  the target file
+
+
+1. Shutdown system
+student $ sudo shutdown -F now
+root # shutdown -F now
+2. clone
+
+3. boot 
+4. change hostname
+hostnamectl hostname 
+5. su to root
+6. ifconfig
+client 192.168.64.130
+server 192.168.64.129
+7. add ip and hostname into /etc/hosts
+8. (only on server) vi /etc/ssh/sshd_config
+9. (only on server) systemctl restart sshd
+
+
+Test network
+ping
+
+Test sshd service (server)
+systemctl status sshd
+
+daemon 
+sshd
+syslogd
+telnetd
+mysqld 
+
+Test ssh command
+ssh <tab tab>
+
+systemctl enable/disable sshd
+- only start the daemon when server reboot
+
+systemctl start/stop sshd
+- start it now but stop when server reboot
+
+systemctl enable sshd --now
+
+from client # ssh root@server
+
+host key
+user key
+
+
+file min permission must have r
+dir min permission must have x (accessible)
+
+r	w	x
+1	0	0 = 4
+1	0	1 = 5
+1	1	0 = 6
+1	1	1 = 7
+
+
+chmod 664 newfile
+or
+chmod ug=rw,o=4 newfile
+
+
+touch fileA
+
+mkdir dirA
+
+umask 
+
+file 	666 --> rw- rw- rw-
+umask	037 --> --- -wx rwx
+----------------------------
+effective	rw- r-- ---
+	
+
+dir 	777 --> rwx rwx rwx
+umask	037 --> --- -wx rwx
+---------------------------
+		rwx r-- ---
+
+
+.kshrc
+.cshrc
+
+
+dirA/fileA
+
+cat dirA/fileA
+
+chmod
+umask
+
+
+
+SSH
+- default: password-based authentication
+- root / redhat or student / student
+- password is hashed with SHA512 (512)
+- swap to key-based authentication (passwordless login)
+  -- client need generate public/private key 
+     # ssh-keygen
+  -- client need upload public key to server
+     # ssh-copy-id root@server    
+  -- client store private key securely 
+  -- 
+Hacker
+- brute force 
+- dictionary attack 
+
+list.doc
+
+
+
+
+
+
+
+
+
+awk
+
+
+
+
+
+
+
