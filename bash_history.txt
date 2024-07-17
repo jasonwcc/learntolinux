@@ -169,3 +169,58 @@ sudo su
 ls .bash_history 
 catash_history 
 cat .bash_history  
+ls
+head -n /etc/passwd
+head -5 /etc/passwd
+head -b 5 /etc/passwd
+head -c 5 /etc/passwd
+head -c 100 /etc/passwd
+head -5 /etc/passwd
+tail +5 /etc/shadow
+tail -5 /etc/passwd
+tail -f /var/log/messages 
+vi /etc/passwd
+ping 192.168.64.128
+ssh root@192.168.64.128
+vi fruits
+vi /etc/profile
+vi /etc/shadow
+vi fruits
+ls -l
+cat /et/chosts
+cat /etc/hosts
+uname -a
+nmcli connection show
+hostname
+ifconfig
+cal 5 2024
+history
+ifconfig
+hostnamectl hostname server.example.com
+ifconfig
+vi /etc/hosts
+cat /etc/hosts
+ping client
+systemctl status sshd
+systemctl enable sshd --now
+systemctl status sshd
+vi /etc/ssh/sshd_config
+systemctl restart sshd
+who
+id
+echo "hi there, i am monitoring u. dun pray pray" > /dev/pts/1
+cat .ssh/authorized_keys 
+cut -d":" -f1,2 /etc/passwd
+cut -d":" -f1,3 /etc/passwd
+cut -d":" -f5,3 /etc/passwd
+cut -d":" -f3,5 /etc/passwd
+cut -d":" -f1,5 /etc/passwd
+cut -d":" -f1,6 /etc/passwd
+cat /etc/passwd
+cut -d":" -f1,6 /etc/passwd
+cat /etc/passwd
+cut -d":" -f3,7 /etc/passwd
+man cp
+man ren
+man rename
+cat .bash_history 
