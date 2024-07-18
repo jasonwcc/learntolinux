@@ -388,19 +388,45 @@ Hacker
 - brute force 
 - dictionary attack 
 
-list.doc
+1. Power-off server
+2. Clone serverA to serverB
+3. change hostname to correct name
+  $ sudo hostnamectl hostname <vm-name>
+4. close and reopen terminal
+5. ifconfig
+serverA	192.168.64.129
+serverB 192.168.64.131
+client  192.168.64.130
+6. $ sudo vi /etc/hosts
+192.168.64.129 	serverA
+192.168.64.131	serverB
+192.168.64.130	client
+7. ping 
+8. client ssh login to serverA
+   $ ssh root@serverA
+     password:  redhat
+9. On client, configure key-based authentication / 
+passwordless ssh-login to serverA, serverB
+9a. Generate user's public/private keys
+    student@client $ ssh-keygen 
+    passphrase: abcd123 protect ur private key
+9b. Upload / copy the  key to servers
+    student@client $ ssh-copy-id root@serverA
+    passphrase: abcd123
+    student@client $ ssh-co-id root@serverB
 
+10. start ssh-agent
+    add key to the agent: abcd123 <passphrase>
 
-
-
-
-
-
-
-
-awk
-
-
+11. Secure server SSH
+11a. Disable password-based authentication
+    Just enable key-based authentication
+11b. Disable root from ssh
+    $ sudo vi /etc/ssh/sshd_config
+    /Password
+    PasswordAuthentication no
+    /PermitRootLogin
+    PermitRootLogin prohibit-password
 
 
 
