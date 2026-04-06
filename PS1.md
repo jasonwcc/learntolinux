@@ -15,7 +15,7 @@
 \[ 		start of non-printing sequence
 \]		end of non-printing sequence
 
-PS1="\[\033[1;32m\]\d\[\033[m\] | \[\033[1;35m\]\t\[\033[m\] | \[\033[m\]\[\e[0m\]\[\e[1;36m\][\w] \[\e[1;32m\]\n\u@\h\ [\033[m\]>  "
+PS1="\[\033[1;32m\]\d\[\033[m\] | \[\033[1;35m\]\t\[\033[m\] | \[\033[m\]\[\e[0m\]\[\e[1;36m\][\w] \[\e[1;32m\]\n\u@\h\ \[\033[m\]>  "
 
 Show fancy emoticon if exit code is non-zero (applicable only with putty and mac terminal)
 PS1="\`if [ \$? = 0 ]; then echo 👍 ; else echo 🔥; fi\`\[\e[35m\] [\u@\h] \[\e[30m\]:\[\e[36m\]\`if [ \$? = 0 ]; then echo 🌈; else echo 🔥; fi\` \w\[\e[37m\] $ "
